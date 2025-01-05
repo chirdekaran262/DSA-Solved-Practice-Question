@@ -82,7 +82,7 @@ public class BFS {
             List<Integer> currentLevel = new ArrayList<>(levelSize);
             for (int i = 0; i < levelSize; i++) {
                 if (!reverse) {
-                    TreeNode currentNode = queue.poll();
+                    TreeNode currentNode = queue.pollFirst();
                     currentLevel.add(currentNode.val);
                     if (currentNode.left != null) {
                         queue.offer(currentNode.left);
@@ -91,20 +91,17 @@ public class BFS {
                         queue.offer(currentNode.right);
                     }
                 } else {
-
-                }
-                reverse = !reverse;
-            }
-            for (int i = 0; i < levelSize; i++) {
-                TreeNode currentNode = queue.poll();
-                currentLevel.add(currentNode.val);
-                if (currentNode.left != null) {
-                    queue.offer(currentNode.left);
-                }
-                if (currentNode.right != null) {
-                    queue.offer(currentNode.right);
+                    TreeNode currentNode=queue.pollLast();
+                    currentLevel.add(currentNode.val);
+                    if(currentNode.right!=null){
+                        queue.addFirst(currentNode.right);
+                    }
+                    if(currentNode.left!=null){
+                        queue.addFirst(currentNode.left);
+                    }
                 }
             }
+            reverse = !reverse;
             result.add(currentLevel);
         }
         return result;
