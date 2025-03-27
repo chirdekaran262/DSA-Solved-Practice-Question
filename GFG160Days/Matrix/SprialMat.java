@@ -1,5 +1,3 @@
-package Matrix;
-
 import java.util.ArrayList;
 
 public class SprialMat {
