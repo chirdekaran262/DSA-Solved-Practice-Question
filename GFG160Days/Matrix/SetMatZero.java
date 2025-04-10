@@ -1,7 +1,5 @@
 public class SetMatZero {
-    // Java code to implement Set Matrix Zeroes using
-// first row and column
-
+   
  
      static void setMatrixZeroes(int[][] mat) {
         int n = mat.length, m = mat[0].length;
