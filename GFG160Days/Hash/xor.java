@@ -1,3 +1,4 @@
+package GFG160Days.Hash;
 import java.util.HashMap;
 
 class xor {
