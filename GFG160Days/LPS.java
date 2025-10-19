@@ -1,4 +1,3 @@
-import java.util.*;
 
 class LPS {
 
@@ -15,10 +14,8 @@ class LPS {
             for (int j = i + 1; j < n; ++j) {
 
                 if (s.charAt(i) == s.charAt(j)) {
-
                     curr[j] = prev[j - 1] + 2;
                 } else {
-
                     curr[j] = Math.max(prev[j], curr[j - 1]);
                 }
             }
