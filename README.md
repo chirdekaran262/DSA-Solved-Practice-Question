@@ -23,7 +23,7 @@ This repository covers a range of DSA topics, with fully implemented Java soluti
 
 1. **Clone the repository** to your local machine:
    ```bash
-   git clone https://github.com/your-username/DSA-solved-questions-java.git
+   git clone https://github.com/chirdekaran262/DSA-solved-questions-java.git
    ```
 2. **Explore the questions in the respective topic folders.**
 
