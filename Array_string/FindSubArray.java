@@ -8,7 +8,7 @@ class FindSubArray {
         Map<Integer, Integer> map = new HashMap<>();
         int count = 0;
         map.put(0, 1);
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i   < n; i++) {
             presum += arr[i];
             if (map.containsKey(presum)) {
                 count += map.get(presum);
